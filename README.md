@@ -6,6 +6,6 @@ In terminal
 
 Go to 
 
-``http://127.0.0.1:8000/View/ProductsView.php``
+``http://127.0.0.1:8000/src/View/ProductsView.php``
 
 The xml file will auto generate in xml folder.
