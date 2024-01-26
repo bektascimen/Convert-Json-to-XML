@@ -1,21 +1,21 @@
 <?php
 
-namespace Service;
+namespace src\Service;
 
-require_once ('../Concracts/ProductListInterface.php');
+require_once('../Concracts/ConvertInterface.php');
 
-use Concracts\ProductListInterface;
+use src\Concracts\ConvertInterface;
 
-class AkakceXMLProductList implements ProductListInterface
+class ConvertXmlService implements ConvertInterface
 {
-    private const COMPANY_NAME = "Akakce";
+    private const COMPANY_NAME = "akakce";
 
-    public function convertToXml($array, &$xml)
+    public function convertData($array, &$xml)
     {
         foreach ($array as $key => $value) {
             if(is_array($value)){
                 $product = $xml->addChild('product');
-                $this->convertToXml($value, $product);
+                $this->convertData($value, $product);
             }
             else {
                 $xml->addChild($key, $value);

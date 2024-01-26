@@ -4,7 +4,7 @@ namespace Trait;
 
 require_once ('../Service/ProductService.php');
 
-use Service\ProductService;
+use src\Service\ProductService;
 
 trait ProductServiceTrait
 {
